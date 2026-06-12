@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+            gap: 10px;
+            /* justify-content: space-between; */
+        }
+
+        .block {
+            /* display: inline-block; */
+            width: 50px;
+            height: 50px;
+            background-color: #f1ad38;
+            /* df/jcc/aic */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <title>Sibling 取平行層</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- .block*4.block$>{$} -->
+        <div class="block block1">1</div>
+        <div class="block block2">2</div>
+        <div class="block block3">3</div>
+        <div class="block block4">4</div>
+    </div>
+</body>
+
+</html>
