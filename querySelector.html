@@ -4,6 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .menu {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 200px;
+            height: 70px;
+            background-color: #deed88;
+            transition: all 1s;
+        }
+
+        .hidden {
+            /* display: none; */
+            width: 0;
+            height: 0;
+        }
+    </style>
     <title>querySelector 的試驗</title>
 </head>
 
@@ -15,6 +32,30 @@
             </div>
         </div>
     </div>
+
+    <div class="name4">
+        <div class="name2">
+            <div class="name3">
+                <input type="text" name="userName" value="May" />
+            </div>
+        </div>
+    </div>
+
+    <div class="menu"></div>
+    <button type="button">開關</button>
+
+
+    <script>
+        let btn = document.querySelector("button");
+        let menu = document.querySelector(".menu");
+
+        btn.onclick = function () {
+            menu.classList.toggle("hidden");
+        }
+
+
+
+    </script>
 
     <script>
         // 找到複數的內容時, 會回傳第一個
@@ -32,6 +73,20 @@
         let name2 = div1.querySelector("div");
         console.log(name2);
         console.log(name2 == div2);
+
+        let value1 = document.querySelector("input");
+        console.log(value1.value);
+        let value2 = name2.querySelector("input");
+        console.log(value2.value);
+        // 屬性選擇器
+        let value3 = document.querySelector("[name=userName]");
+        console.log(value3.value);
+        // 標籤選擇器 + 屬性選擇器
+        let value4 = document.querySelector("input[name=userName]");
+        console.log(value4.value);
+        // 標籤選擇器 + 屬性選擇器
+        let value5 = document.querySelector(".name4 input[name=userName]");
+        console.log(value5.value);
 
 
 
