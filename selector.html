@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* []: 屬性選擇器 */
+        input[name=user] {
+            background-color: rgb(153, 234, 250);
+            border: none;
+            width: 200px;
+            font-size: 24px;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        input[name=pwd] {
+            background-color: rgb(237, 67, 19);
+            border: none;
+            width: 200px;
+            font-size: 24px;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+    <title>選擇器</title>
+</head>
+
+<body>
+    <!-- .name1>.name2:  .name1 下一層的 .name2 -->
+    <div class="name1">
+        <div class="name2"></div>
+    </div>
+
+    <!-- .name1.name2 在同一個 class 中同時有 name1 和 name2 -->
+    <div class="name1 name2"></div>
+
+    <!-- .name1+.name2: 平行的 -->
+    <div class="name1"></div>
+    <div class="name2"></div>
+
+    <input type="text" name="user" />
+    <input type="text" name="pwd" />
+
+</body>
+
+</html>
