@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName 的試驗</title>
+</head>
+
+<body>
+    <article>
+        <h1>TITLE</h1>
+        <h2>subtitle</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+            alias?
+        </p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </article>
+
+    <script>
+        let ps = document.getElementsByTagName("p");
+        console.log(ps);
+        console.log(ps.length);
+        console.log(ps[0]);
+        ps[1].innerHTML = "台雞店"
+
+
+        let imgs = document.getElementsByTagName("img");
+        console.log(imgs.length);
+
+        // 抓到的內容即使只有一個, 也是會用複數的型態回傳
+        // 要再用 [0] 把真正的內容取出才能再應用
+        let articles = document.getElementsByTagName("article");
+        console.log(articles);
+        console.log(articles[0]);
+
+        // getElementsByTagName 可以換來源
+        let h2s = articles[0].getElementsByTagName("h2")
+        console.log(h2s);
+
+        // innerHTML 如果沒有等號指定內容, 就是取內容的意思
+        console.log(h2s[0].innerHTML);
+
+
+
+    </script>
+</body>
+
+</html>
