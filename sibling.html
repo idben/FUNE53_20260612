@@ -60,12 +60,18 @@
         btn_left.onclick = function () {
             // alert("左左")
             let active = document.querySelector(".active");
+            if (!active.previousElementSibling) {
+                return;
+            }
             active.previousElementSibling.classList.add("active");
             active.classList.remove("active");
         }
         btn_right.onclick = function () {
             // alert("右右")
             let active = document.querySelector(".active");
+            if (!active.nextElementSibling) {
+                return;
+            }
             active.nextElementSibling.classList.add("active");
             active.classList.remove("active");
         }
