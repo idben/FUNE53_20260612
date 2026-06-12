@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByName 的試驗</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" name="firstName" value="Ben" />
+        <input type="text" name="lastName" value="Chen" />
+        <br>
+        <button type="submit">送出</button>
+        <button type="button">OOXX</button>
+        <button type="reset">重設</button>
+    </form>
+    <div name="firstName">aaaa</div>
+
+    <script>
+        let name1 = document.getElementsByName("firstName");
+        console.log(name1);
+        console.log(name1.length);
+
+        // 使用情境: 修改資料
+        name1[0].value = "May";
+        name1[1].innerHTML = "May";
+
+        let form = document.getElementsByTagName("form");
+        console.log(form[0]);
+
+        // getElementsByName 不能換來源
+        let name2 = document.getElementsByName("lastName");
+        console.log(name2[0].value);
+
+
+
+    </script>
+</body>
+
+</html>
