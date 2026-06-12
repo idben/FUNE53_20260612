@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector 的試驗</title>
+</head>
+
+<body>
+    <div class="name1">
+        <div class="name2">
+            <div class="name3">
+                <input type="text" name="userName" value="Ben" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 找到複數的內容時, 會回傳第一個
+        // 會回傳單數型態, 也就是 element 元素型態
+        let div1 = document.querySelector("div");
+        console.log(div1);
+        // 用樣式選擇器抓一樣的元素
+        let name1 = document.querySelector(".name1");
+        console.log(name1);
+        // 用程式判斷抓到的是不是一樣的東西
+        console.log(name1 == div1);
+
+        let div2 = document.querySelector(".name2");
+        console.log(div2);
+        let name2 = div1.querySelector("div");
+        console.log(name2);
+        console.log(name2 == div2);
+
+
+
+
+    </script>
+</body>
+
+</html>
