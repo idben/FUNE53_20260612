@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 寫在哪 02</title>
+</head>
+
+<body>
+    <div class="btn">點擊我</div>
+    <!-- 寫在獨立的 script 標籤中 -->
+    <script>
+        let $0 = document.querySelector(".btn");
+        $0.onclick = function () {
+            console.log("QQ");
+        }
+    </script>
+</body>
+
+</html>
