@@ -41,15 +41,35 @@
     <div class="container">
         <!-- .block*4.block$>{$} -->
         <div class="block block1">1</div>
-        <div class="block block2 active">2</div>
+        <div class="block block2">2</div>
         <div class="block block3">3</div>
-        <div class="block block4">4</div>
+        <div class="block block4 active">4</div>
+        <div class="block block5">5</div>
+        <div class="block block6">6</div>
     </div>
     <div class="ctrl">
         <button>向左一個</button>
         <button>向右一個</button>
     </div>
 
+    <script>
+
+        let btn_left = document.querySelectorAll("button")[0];
+        let btn_right = document.querySelectorAll("button")[1];
+
+        btn_left.onclick = function () {
+            // alert("左左")
+            let active = document.querySelector(".active");
+            active.previousElementSibling.classList.add("active");
+            active.classList.remove("active");
+        }
+        btn_right.onclick = function () {
+            // alert("右右")
+            let active = document.querySelector(".active");
+            active.nextElementSibling.classList.add("active");
+            active.classList.remove("active");
+        }
+    </script>
 </body>
 
 </html>
