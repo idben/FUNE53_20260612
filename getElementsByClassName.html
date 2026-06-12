@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName 的試驗</title>
+</head>
+
+<body>
+    <div class="aaa">
+        <div class="bbb">
+            <div class="ccc"></div>
+        </div>
+    </div>
+    <div class="ccc"></div>
+
+    <script>
+        let ccc = document.getElementsByClassName("ccc");
+        console.log(ccc);
+        console.log(ccc.length);
+
+        let aaa = document.getElementsByClassName("aaa");
+        console.log(aaa);
+
+        let bbb = aaa[0].getElementsByClassName("bbb")
+        console.log(bbb);
+
+        ccc[0].innerText = "123"
+        ccc[1].innerText = "<h1>ABC</h1>"
+
+
+
+    </script>
+</body>
+
+</html>
