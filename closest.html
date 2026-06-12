@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .row {
+            display: flex;
+
+            /* &.active {
+                background-color: #fce0a3;
+            } */
+
+            .col-1 {
+                width: 30px;
+            }
+
+            .col-2 {
+                width: 80px;
+            }
+
+            .col-3 {
+                /* 剩餘寬度 */
+                flex: 1;
+
+                .tt {
+                    background-color: #f88a8a;
+                }
+            }
+        }
+
+        .active {
+            background-color: #fce0a3;
+        }
+    </style>
+    <title>closest: 向上找...直到</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col col-1 bgc1">#</div>
+            <div class="col col-2 bgc2">name</div>
+            <div class="col col-3 bgc3">des</div>
+        </div>
+        <div class="row">
+            <div class="col col-1">1</div>
+            <div class="col col-2">黃家雪</div>
+            <div class="col col-3">
+                英文走到出現學校知識地說導致推出投資以下，一張則是新聞典型等級西安，鑒定語言一。
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-1">2</div>
+            <div class="col col-2">李慧娟</div>
+            <div class="col col-3">
+                外掛相關內容第二次整合有利於所需住宅下面，模擬說是，
+                <span class="tt">服飾</span>
+                意思性別練習承認手裡另。
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-1">3</div>
+            <div class="col col-2">高欣怡</div>
+            <div class="col col-3">
+                各國這個問題，各個恐怕，搜尋相信醫生阿摩斯，股票地區還沒美國目前老人，原因查詢。
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-1">4</div>
+            <div class="col col-2">彭儒修</div>
+            <div class="col col-3">
+                提供東京語言頭髮民族以及本週授權方式有意是一個範圍內，相同好處，為止存款表情股。
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-1">5</div>
+            <div class="col col-2">白禹瑄</div>
+            <div class="col col-3">
+                您是我很肯定空氣在他能源緊緊指南，不願意公斤確定大力<span class="tt">渠道</span>，法人期限對外，法規飯。
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let tts = document.querySelectorAll(".tt");
+
+        tts[0].onclick = function () {
+            // tts[0].parentElement.parentElement.classList.toggle("active");
+            this.closest(".row").classList.toggle("active");
+        }
+        tts[1].onclick = function () {
+            this.closest(".row").classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
