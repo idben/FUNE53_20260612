@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            width: 100%;
+        }
+    </style>
     <title>getElementById 的試驗</title>
 </head>
 
@@ -13,6 +18,8 @@
             <div id="ccc">123</div>
         </div>
     </div>
+
+    <div id="ddd"></div>
 
 
     <script>
@@ -25,6 +32,8 @@
 
         ccc.innerHTML = "<h1>正 2</h1>"
 
+        let ddd = document.getElementById("ddd");
+        ddd.innerHTML = "<img src='https://images.pexels.com/photos/34960157/pexels-photo-34960157.jpeg'>"
     </script>
 </body>
 
